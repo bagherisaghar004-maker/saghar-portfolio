@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساغر | طراح وب و ادمین</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background: #09080e;
+            color: #fff;
+            line-height: 1.9;
+        }
+
+        :root {
+            --purple: #a855f7;
+            --light-purple: #c084fc;
+            --dark: #09080e;
+            --card: #15121d;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(9, 8, 14, .92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #292033;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: var(--light-purple);
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        nav {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #d4c9df;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--light-purple);
+        }
+
+        .hero {
+            min-height: 85vh;
+            padding: 90px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:
+                radial-gradient(circle at 50% 35%, #51207855, transparent 45%);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 7px 18px;
+            border: 1px solid #8545b5;
+            border-radius: 30px;
+            color: var(--light-purple);
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 75px);
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: var(--light-purple);
+            text-shadow: 0 0 25px #a855f766;
+        }
+
+        .hero p {
+            color: #c6bdcf;
+            font-size: 17px;
+            margin: 20px auto 30px;
+            max-width: 600px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 27px;
+            border-radius: 12px;
+            border: 1px solid var(--purple);
+            color: var(--light-purple);
+            transition: .3s;
+            display: inline-block;
+        }
+
+        .btn.primary {
+            background: var(--purple);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px #a855f755;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: var(--light-purple);
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #c9c1d2;
+            font-size: 16px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid #30243e;
+            padding: 28px;
+            border-radius: 18px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            border-color: var(--purple);
+            box-shadow: 0 10px 30px #a855f722;
+        }
+
+        .card h3 {
+            color: var(--light-purple);
+            margin-bottom: 12px;
+            font-size: 19px;
+        }
+
+        .card p {
+            color: #c3baca;
+            font-size: 14px;
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .experience {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .experience .card {
+            margin-bottom: 18px;
+        }
+
+        .contact {
+            text-align: center;
+            background: linear-gradient(180deg, #09080e, #1b1028);
+        }
+
+        .contact p {
+            color: #c9c1d2;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #93869e;
+            border-top: 1px solid #292033;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+
+            .hero {
+                padding: 70px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Saghar.</div>
+
+        <nav>
+            <a href="#home">خانه</a>
+            <a href="#about">درباره من</a>
+            <a href="#skills">مهارت‌ها</a>
+            <a href="#experience">سوابق کاری</a>
+            <a href="#contact">ارتباط با من</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="tag">پورتفولیوی شخصی من</div>
+
+            <h1>
+                سلام، من <span>ساغر</span> هستم
+            </h1>
+
+            <p>
+                دانشجو، علاقه‌مند به دنیای تکنولوژی،
+                هوش مصنوعی و طراحی وب.
+                من عاشق یادگیری، خلاقیت و ساختن تجربه‌های دیجیتال هستم.
+            </p>
+
+            <div class="buttons">
+                <a href="#contact" class="btn primary">
+                    ارتباط با من
+                </a>
+
+                <a href="#skills" class="btn">
+                    مشاهده مهارت‌ها
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">
+            درباره <span>من</span>
+        </h2>
+
+        <div class="about">
+            <p>
+                من ساغر، ۲۱ ساله و دانشجو هستم.
+                به تکنولوژی، طراحی سایت و ابزارهای هوش مصنوعی
+                علاقه زیادی دارم.
+                دوره پیشرفته کامپیوتر و سیستم و همچنین دوره ICDL
+                را گذرانده‌ام.
+                تجربه فعالیت به عنوان ادمین صفحه بلاگری را دارم
+                و همیشه برای یادگیری مهارت‌های جدید و پیشرفت
+                در دنیای دیجیتال تلاش می‌کنم.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">
+            مهارت‌های <span>من</span>
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>طراحی وب</h3>
+                <p>
+                    آشنایی و یادگیری طراحی و ساخت صفحات وب
+                    با HTML و CSS.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>هوش مصنوعی</h3>
+                <p>
+                    آشنایی با ابزارهای هوش مصنوعی
+                    و کاربرد آن‌ها در کار و تولید محتوا.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🖥️</div>
+                <h3>مهارت‌های کامپیوتری</h3>
+                <p>
+                    گذراندن دوره پیشرفته کامپیوتر،
+                    سیستم و ICDL.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>مدیریت پیج</h3>
+                <p>
+                    تجربه فعالیت به عنوان ادمین
+                    صفحه بلاگری.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">
+            سوابق و <span>تجربیات</span>
+        </h2>
+
+        <div class="experience">
+
+            <div class="card">
+                <h3>ادمین صفحه بلاگری</h3>
+                <p>
+                    تجربه فعالیت در مدیریت و رسیدگی به
+                    صفحه بلاگری.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>دوره پیشرفته کامپیوتر و ICDL</h3>
+                <p>
+                    گذراندن دوره‌های آموزشی مهارت‌های
+                    کامپیوتری و کار با سیستم.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>طراحی وب</h3>
+                <p>
+                    در حال توسعه مهارت‌های طراحی و
+                    ساخت وب‌سایت‌های شخصی و حرفه‌ای.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">
+            بیایید با هم <span>در ارتباط باشیم</span>
+        </h2>
+
+        <p>
+            برای همکاری، پیشنهاد شغلی یا ارتباط بیشتر
+            می‌توانید از راه‌های زیر با من در تماس باشید.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn primary" href="tel:+989024822617">
+                ☎ تماس با ساغر
+            </a>
+
+            <a class="btn" href="https://t.me/Wine004ooo" target="_blank" rel="noopener noreferrer">
+                ✈ تلگرام من
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        طراحی شده با عشق توسط ساغر 💜
+        <br>
+        © 2026 Saghar Portfolio
+    </footer>
+
+</body>
+</html>
